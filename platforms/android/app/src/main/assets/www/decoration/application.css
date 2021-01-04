@@ -1,0 +1,186 @@
+﻿@import "normalize.css" ;
+
+@font-face {
+	font-family: 'Simplicity';
+	src: url('font/simplicity/Simplicity.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'Gameplay';
+	src: url('font/gameplay/Gameplay.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('font/roboto/Roboto-Regular.ttf')  format('truetype');
+}
+
+:root {
+  --theme-rouge: #fd341f;
+  --theme-blanc-transparent: rgba(255,255,255,0.3);
+  --theme-bleu-pale: rgba(151,219,246,1);
+  --theme-bleu-fonce: rgba(63,155,191,1);
+  --theme-vert: #408450;
+  --theme-blanc: white;
+  --theme-noir: black;
+  --theme-gris-clair: #999999;
+  --theme-gris-fonce: #505050;
+
+  --theme-bordure-rondeur: 0.5rem;
+}
+
+html {
+  font-family:'Simplicity', sans-serif;
+  font-size:48px;
+}
+
+#liste-objet {
+  list-style-type:none;
+}
+
+.liste-objet-item {
+  color:var(--theme-bleu-pale);
+  text-transform : capitalize;
+  text-decoration:none;
+  font-family:'Gameplay', sans-serif;
+}
+
+#liste-objet li {
+  position:relative;
+  display:block;
+  margin-bottom:0.25rem;
+  background-color:var(--theme-blanc-transparent);
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+  padding-left:1.50rem;
+  box-shadow: 2px 2px var(--theme-blanc);
+}
+
+#liste-objet li::before {
+   content:"X";
+   text-align:center;
+   color:var(--theme-bleu-pale);
+   font-size:0.75rem;
+   position:absolute;
+   top:0.1rem;
+   left:0.25rem;
+   height:1rem;
+   width:1rem;
+
+   font-family:'Roboto', sans-serif;
+
+
+}
+
+fieldset {
+  color:var(--theme-bleu-pale);
+  border-color: var(--theme-blanc);
+  border-radius:var(--theme-bordure-rondeur);
+  font-family: 'Roboto';
+}
+
+input[type="text"],
+textarea {
+  display:block;
+  width:100%;
+  border:none;
+  background-color:var(--theme-blanc-transparent);
+  border-radius:var(--theme-bordure-rondeur);
+}
+
+#page-chargement-application{
+  position:relative;
+  height:100vh;
+  background-image:url(illustration/pngwing.com.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:bottom center;
+  background-attachment:fixed;
+
+  text-align:center;
+  font-size:1rem;
+  font-family:'Simplicity', sans-serif;
+  font-weight:normal;
+  line-height:1.8rem;
+
+  padding:10%;
+  color:var(--theme-bleu-pale);
+  text-shadow: 2px 2px var(--theme-noir);
+  animation: pulse 1.5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  0% {
+    background-color:var(--theme-gris-fonce);
+  }
+  100% {
+    background-color:var(--theme-gris-clair);
+  }
+}
+
+
+
+.page {
+  position:relative;
+  background-color:var(--theme-gris-clair);
+  padding:5%;
+  font-size:0.5rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Gameplay';
+  background-image:url(illustration/cartoon-valise.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:right bottom;
+  background-attachment:fixed;
+  background-size: 50%;
+  color:var(--theme-bleu-pale);
+}
+
+
+.page h1{
+  font-family:'Simplicity', sans-serif;
+  text-align:center;
+  font-size:2rem;
+  font-family:'Simplicity', sans-serif;
+  font-weight:normal;
+  line-height:1.8rem;
+  color:var(--theme-bleu-pale);
+  text-shadow: 2px 2px var(--theme-blanc);
+
+}
+
+.page h2,
+.page p {
+  background-color:var(--theme-blanc-transparent);
+  border:0px transparent solid;
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+}
+
+
+.action{
+  position:relative;
+  display:block;
+  text-decoration: none;
+  font-family:sans-serif;
+  background-color:#505050;
+  color:var(--theme-blanc);
+  border:0px transparent solid;
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+  font-family:'Gameplay', sans-serif;
+  font-size:0.25rem;
+  text-align:center;
+  width:50%;
+  margin:0 auto;
+  box-sizing: border-box;
+  margin-top:0.25rem;
+  margin-bottom:0.25rem;
+  box-shadow: 2px 2px var(--theme-blanc);
+}
+
+.action:active {
+  border:0px transparent solid;
+}

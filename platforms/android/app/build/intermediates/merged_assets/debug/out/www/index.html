@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Liste des objet de la valise</title>
+  <link rel="stylesheet" href="decoration/application.css">
+  <style></style>
+
+  <script src="cordova.js"></script>
+
+  <script src="modele/Objet.js"></script>
+  <script src="donnee/ObjetDAO.js"></script>
+
+  <script src="vue/VueObjet.js"></script>
+  <script src="vue/VueModifierObjet.js"></script>
+  <script src="vue/VueListeObjet.js"></script>
+  <script src="vue/VueAjouterObjet.js"></script>
+  
+
+  <script defer src="Application.js"></script>
+
+</head>
+<body>
+
+	<div id="page-chargement-application">Chargement de l'application Valise Complete</div>
+
+  	<script type="plain/text" id="html-vue-liste-objet">
+	  	<div class="page">
+		    <h1>Liste des objets</h1>
+		    <a class="action" href="#ajouter-objet">Ajouter un objet</a>
+		    <ul id="liste-objet">
+		      <li>
+		      	<a href="#objet/{Objet.id}" class="liste-objet-item">{Objet.nom}</a>
+		      	<a href="#modifier/{Objet.id}" class="action">Modifier</a>
+		      </li>
+		    </ul>
+		 </div>
+	</script>
+
+	<script type="plain/text" id="html-vue-ajouter-objet">
+		<div class="page">
+	    <h1>Ajouter un Objet</h1>
+	    <form id="formulaire-ajouter">
+	      <fieldset>
+	        <legend>Identification de l'objet</legend>
+	        <div>
+	          <label for="objet-nom">Nom</label>
+	          <input type="text" id="objet-nom"/>
+	        </div>
+	        <div>
+	          <label for="objet-marque">Marque</label>
+	          <input type="text" id="objet-marque"/>
+	        </div>
+	      </fieldset>
+	      <fieldset>
+	        <legend>D&eacute;tails sur l'objet'</legend>
+	        <div>
+	          <label for="objet-description">Description</label>
+	          <textarea id="objet-description"></textarea>
+	        </div>
+	      </fieldset>
+	      <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
+	    </form>
+	    <a href="#" class="action">Annuler et revenir a la liste</a>
+	  </div>
+	</script>
+
+	<script type="plain/text" id="html-vue-objet">
+		<div class="page">
+		    <h1>Objet de la valise</h1>
+		    <h2 id="objet-nom"></h2>
+		    <p id="objet-marque"></p>
+		    <p id="objet-description"></p>
+		    <a href="#" class="action">Revenir a la liste</a>
+  		</div>
+	</script>
+
+	<script type="plain/text" id="html-vue-modifier-objet">
+	  <div class="page">
+	    <h1>Modifier un Objet</h1>
+	    <form id="formulaire-modifier">
+	      <fieldset>
+	        <legend>Identification de l'objet</legend>
+	        <div>
+	          <label for="objet-nom">Nom</label>
+	          <input type="text" id="objet-nom"/>
+	        </div>
+	        <div>
+	          <label for="objet-marque">Marque</label>
+	          <input type="text" id="objet-marque"/>
+	        </div>
+	      </fieldset>
+	      <fieldset>
+	        <legend>D&eacute;tails sur l'objet'</legend>
+	        <div>
+	          <label for="objet-description">Description</label>
+	          <textarea id="objet-description"></textarea>
+	        </div>
+	      </fieldset>
+	      <input class="action" type="submit" id="modifier" value="Modifier"/>
+	    </form>
+	    <a href="#" class="action">Annuler et revenir a la liste</a>
+	  </div>
+	</script>
+
+</body>
+</html>
